@@ -1,4 +1,5 @@
 /* pages/components/view/pages/arc-popup/index.wxss */
+
 .buttun-wrapper {
   display: flex;
   flex-direction: row;
@@ -55,8 +56,8 @@
   justify-content: center;
 }
 
-.top{
-    width: 100%;
+.top {
+  width: 100%;
   background: #fff;
   height: 300rpx;
   overflow: hidden;
@@ -90,4 +91,64 @@
   margin: 50rpx auto;
   line-height: 72rpx;
   text-align: center;
+}
+
+.popup-demo {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-demo-top {
+  display: flex;
+  align-items: center;
+}
+
+.popup-demo-top-image {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+}
+
+.popup-demo-desc {
+  font-size: 33rpx;
+  font-weight: 500;
+  margin-top: 30rpx;
+}
+
+.popup-demo-info {
+  display: flex;
+  padding: 15rpx 0;
+  margin-top: 30rpx;
+  border-top: 2rpx solid #eee;
+  border-bottom: 2rpx solid #eee;
+}
+
+.popup-demo-info-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.popup-demo-info-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 30rpx;
+  width: 200rpx;
+  height: 100rpx;
+}
+
+.popup-demo-info-name {
+  font-size: 33rpx;
+}
+.popup-demo-info-desc {
+  color: #555;
+}
+
+.popup-demo-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 80rpx;
 }

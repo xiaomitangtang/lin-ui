@@ -8,8 +8,16 @@ Page({
    */
   data: {
     navConfig: navConfig,
-    currentConf: {
-
+    currentConfig: {
+      show: false,
+      transition: true,
+      zIndex: 99,
+      locked: false,
+      direction: "bottom",
+      arcRadius: 18,
+      maxHeight: 600,
+      minHeight: 200,
+      opacity: 0.4
     }
   },
 
@@ -18,7 +26,7 @@ Page({
     const type = e.currentTarget.dataset.type
     const config = this.data.navConfig[type].config
     this.setData({
-      currentConf: config,
+      currentConfig: config,
       type
     })
   },
@@ -26,9 +34,9 @@ Page({
   // 隐藏Popup
   onHidePopupTap() {
     const type = this.data.type
-    this.data.currentConf.show = false
+    this.data.currentConfig.show = false
     this.setData({
-      currentConf: this.data.currentConf
+      currentConfig: this.data.currentConfig
     })
 
     if (type === 3) {

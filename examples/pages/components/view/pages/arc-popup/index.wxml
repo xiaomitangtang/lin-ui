@@ -11,7 +11,8 @@
   </content-title>
 
   <!-- popup -->
-  <l-arc-popup show="{{currentConf.show}}" transition="{{currentConf.transition}}" direction="{{currentConf.direction}}" locked="{{currentConf.locked}}" maxHeight="{{currentConf.maxHeight}}" minHeight="{{currentConf.minHeight}}" arcRadius="{{currentConf.arcRadius}}" opacity="{{currentConf.opacity}}">
+  <l-arc-popup show="{{currentConfig.show}}" transition="{{currentConfig.transition}}" direction="{{currentConfig.direction}}" locked="{{currentConfig.locked}}" maxHeight="{{currentConfig.maxHeight}}" minHeight="{{currentConfig.minHeight}}" arcRadius="{{currentConfig.arcRadius}}"
+    opacity="{{currentConfig.opacity}}">
     <view wx:if="{{type == 0 }}">
       基础案例
     </view>
@@ -25,7 +26,14 @@
       从上方弹出
     </view>
     <view wx:if="{{type == 4 }}" style="height: 800rpx;">
-      超出高度可滚动
+      <l-list title="生成我的海报" />
+      <l-list title="常见问题" />
+      <l-list title="设置" />
+      <l-list title="客服中心" desc="工作时间：8:00-18:00" />
+      <l-list title="生成我的海报" />
+      <l-list title="常见问题" />
+      <l-list title="设置" />
+      <l-list title="客服中心" desc="工作时间：8:00-18:00" />
     </view>
 
     <view wx:if="{{type == 5 }}">
@@ -36,8 +44,32 @@
       设置组件弧度
     </view>
 
-     <view wx:if="{{type == 7 }}">
+    <view wx:if="{{type == 7 }}">
       设置遮罩区域透明度
+    </view>
+
+    <view wx:if="{{type == 8 }}" class="popup-demo">
+      <view class="popup-demo-top">
+        <image src="/images/view/default-image.jpg" class="popup-demo-top-image"></image>
+        <text style="margin-left:20rpx;font-weight: 550;">LinUI</text>
+        <text style="margin-left:20rpx;font-weight: 550;">申请</text>
+      </view>
+      <view class="popup-demo-desc">获取你的昵称、头像、地区及性别</view>
+      <view class="popup-demo-info">
+        <view class="popup-demo-info-avatar">
+          <open-data type="userAvatarUrl"></open-data>
+        </view>
+        <view class="popup-demo-info-detail">
+          <view class="popup-demo-info-name">
+            <open-data type="userNickName"></open-data>
+          </view>
+          <view class="popup-demo-info-desc">微信个人信息</view>
+        </view>
+      </view>
+      <view class="popup-demo-button">
+        <l-button style='margin-right:50rpx' bg-color="#ccc">取消</l-button>
+        <l-button type="success" style='margin-right:50rpx'>允许</l-button>
+      </view>
     </view>
 
   </l-arc-popup>

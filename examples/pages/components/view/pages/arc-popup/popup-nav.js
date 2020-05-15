@@ -117,6 +117,21 @@ const pupopNaviConfigs = [{
       minHeight: 200,
       opacity: 0.8
     }
+  },
+  {
+    title: "常见案例",
+    type: 8,
+    config: {
+      show: true,
+      transition: true,
+      zIndex: 99,
+      locked: false,
+      direction: "bottom",
+      arcRadius: 18,
+      maxHeight: 600,
+      minHeight: 600,
+      opacity: 0.4
+    }
   }
 ]
 
